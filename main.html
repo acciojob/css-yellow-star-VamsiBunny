@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Star</title>
+  <style>
+    .star {
+      position: relative;
+      display: block;
+      margin: 50px auto;
+      width: 0;
+      height: 0;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid yellow;
+      border-left: 100px solid transparent;
+      transform: rotate(35deg);
+    }
+
+    .star:before {
+      content: '';
+      position: absolute;
+      top: -45px;
+      left: -65px;
+      width: 0;
+      height: 0;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid yellow;
+      border-left: 100px solid transparent;
+      transform: rotate(-70deg);
+    }
+
+    .star:after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: -105px;
+      width: 0;
+      height: 0;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid yellow;
+      border-left: 100px solid transparent;
+      transform: rotate(-140deg);
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <div class="star"></div>
 </body>
-
 </html>
